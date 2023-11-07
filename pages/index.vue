@@ -1,9 +1,16 @@
 <template>
-  <div>
+  <div v-if="heroData.hero">
     <Hero
-      manchet="STUDENT DEVELOPER"
-      content="Ambitiøs og motiveret udvikler med færdigheder inden for JavaScript, React, Vue, Nuxt 3 og Next.js. Erfaring med frontend-styling og teamwork. Passioneret omkring læring og konstant udvikling. Klar til at styrke jeres team?"
-      title="MOMO AMIR"
-      img="bla bla" />
+      :manchet="heroData.hero.manchet"
+      :content="heroData.hero.content"
+      :title="heroData.hero.title"
+      :linkText="heroData.hero.linkText"
+      :img="heroData.hero.img" />
   </div>
 </template>
+
+<script setup lang="ts">
+import { GqlHero } from "#gql";
+const heroData = await GqlHero({ id: "cloopxf9k04yd0bupi09h56k2" });
+console.log(heroData);
+</script>

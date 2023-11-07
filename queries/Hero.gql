@@ -1,0 +1,8 @@
+query Hero($id: ID!) {
+  hero(where: { id: $id }) {
+    linkText
+    manchet
+    title
+    content
+  }
+}

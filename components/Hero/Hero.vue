@@ -1,18 +1,20 @@
 <template>
-  <div class="hero min-h-screen bg-base" v-bind="$attrs">
+  :
+
+  <div class="hero min-h-screen bg-base" :key="id">
     <Transition name="fade">
       <div v-if="mounted" class="hero-content flex-col lg:flex-row-reverse">
         <img
           v-if="props.img"
-          src="../../assets/images/IMG_0230.jpg"
+          :src="props.img"
           class="max-w-sm rounded-lg shadow-2xl" />
         <div>
           <h1 class="text-8xl font-bold">{{ props.title }}</h1>
           <h2 class="py-6 text-5xl">{{ props.manchet }}</h2>
           <text-rte class="py-5 text text-xl" :content="content"></text-rte>
-          <NuxtLink to="/portfolio" class="btn btn-lg rounded-xl btn-outline"
-            >Se mit portfolio</NuxtLink
-          >
+          <NuxtLink to="/portfolio" class="btn btn-lg rounded-xl btn-outline">{{
+            props.linkText
+          }}</NuxtLink>
         </div>
       </div>
     </Transition>
@@ -22,9 +24,10 @@
 <script setup lang="ts">
 const props = defineProps<{
   title?: string;
-  manchet: string;
+  manchet?: string;
   content: string;
-
+  linkText?: string;
+  id?: string;
   img?: string;
 }>();
 
