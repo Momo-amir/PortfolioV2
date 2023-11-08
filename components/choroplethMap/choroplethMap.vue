@@ -599,7 +599,7 @@ function createMap() {
   font-size: 1.2rem;
 }
 .leaflet-container {
-  background: transparent;
+  background: transparent !important;
 }
 
 .leaflet-popup-content-wrapper {
