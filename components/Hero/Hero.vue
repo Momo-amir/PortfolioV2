@@ -9,12 +9,22 @@
           :src="props.img"
           class="max-w-sm rounded-lg shadow-2xl" />
         <div>
-          <h1 class="text-8xl font-bold">{{ props.title }}</h1>
-          <h2 class="py-6 text-5xl">{{ props.manchet }}</h2>
-          <text-rte class="py-5 text text-xl" :content="content"></text-rte>
-          <NuxtLink to="/portfolio" class="btn btn-lg rounded-xl btn-outline">{{
-            props.linkText
-          }}</NuxtLink>
+          <h1 v-if="props.title" class="text-8xl font-bold">
+            {{ props.title }}
+          </h1>
+          <h2 v-if="props.manchet" class="py-6 text-5xl">
+            {{ props.manchet }}
+          </h2>
+          <text-rte
+            v-if="props.content"
+            class="py-5 text text-xl"
+            :content="content"></text-rte>
+          <NuxtLink
+            v-if="linkText"
+            to="/portfolio"
+            class="btn btn-lg rounded-xl btn-outline"
+            >{{ props.linkText }}</NuxtLink
+          >
         </div>
       </div>
     </Transition>
@@ -24,7 +34,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   title?: string;
-  manchet?: string;
+  manchet: string;
   content: string;
   linkText?: string;
   id?: string;

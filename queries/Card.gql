@@ -1,0 +1,12 @@
+query Card($id: ID!) {
+  card(where: { id: $id }) {
+    title
+    description
+    link
+    linkTarget
+    imageAlt
+    image {
+      url
+    }
+  }
+}

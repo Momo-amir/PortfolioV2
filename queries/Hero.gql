@@ -4,5 +4,8 @@ query Hero($id: ID!) {
     manchet
     title
     content
+    heroImage {
+      url
+    }
   }
 }

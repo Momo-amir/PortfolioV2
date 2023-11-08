@@ -2,11 +2,10 @@
   <Transition name="fade">
     <div
       v-if="mounted"
-      class="md:container br-lg grid grid-cols-1 md:grid-cols-12 auto-rows-min md:auto-rows-max gap-5 my-20"
-      v-bind="$attrs">
+      class="md:container br-lg grid grid-cols-1 md:grid-cols-12 auto-rows-min md:auto-rows-max gap-5 my-20">
       <img
         v-if="props.img"
-        src="../../assets/images/Momosun.jpg"
+        :src="props.img"
         class="rounded-xl shadow-2xl col-span-12 md:col-start-2 md:col-span-5 lg:col-span-6" />
       <div
         class="bg-accent text-neutral-content rounded-xl"

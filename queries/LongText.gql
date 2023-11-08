@@ -1,0 +1,14 @@
+query LongText($id: ID!) {
+  longText(where: { id: $id }) {
+    title
+    content {
+      text
+      html
+      markdown
+      raw
+    }
+    img {
+      url
+    }
+  }
+}

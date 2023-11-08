@@ -1,0 +1,17 @@
+query pageHeader($id: ID!) {
+  pageHeader(where: { id: $id }) {
+    title
+    manchet {
+      text
+      html
+      markdown
+      raw
+    }
+    content {
+      text
+      html
+      markdown
+      raw
+    }
+  }
+}

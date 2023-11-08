@@ -19,7 +19,7 @@
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[50] p-2 shadow bg-base-100 rounded-box w-52">
-          <li><NuxtLink to="/cases">Portfolio</NuxtLink></li>
+          <li><NuxtLink to="/portfolio">Portfolio</NuxtLink></li>
           <li><NuxtLink to="/about">Om mig</NuxtLink></li>
 
           <li><NuxtLink to="/contact">Kontakt</NuxtLink></li>

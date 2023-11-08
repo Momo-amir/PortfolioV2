@@ -1,17 +1,18 @@
 <template>
   <Transition name="fade">
-    <NuxtLink :to="props.link" :target="props.linkTarget" v-if="mounted">
+    <NuxtLink v-if="props.link" :to="props.link" :target="props.linkTarget">
       <div class="relative rounded flex">
         <img
-          :src="image"
-          alt=""
+          v-if="props.image"
+          :src="props.image"
+          :alt="imageAlt"
           class="w-full h-full object-cover rounded-xl" />
         <div
           class="card absolute inset-0 bg-black bg-opacity-0 transition-opacity hover:bg-opacity-80 flex items-center justify-center">
           <div
             class="card-text flex flex-col justify-center p-4 opacity-0 transition-opacity text-center">
-            <h2 class="text-white text-lg">{{ title }}</h2>
-            <p class="text-white">{{ description }}</p>
+            <h2 v-if="props.title" class="text-white text-lg">{{ title }}</h2>
+            <p v-if="props.description" class="text-white">{{ description }}</p>
           </div>
         </div>
       </div></NuxtLink
@@ -24,16 +25,15 @@ const props = defineProps<{
   title: string;
   description: string;
   image: string;
+  imageAlt: string;
   link: string;
   linkTarget?: string;
 }>();
 
 let mounted = ref(false);
-console.log(mounted);
 
 onMounted(() => {
   mounted.value = true;
-  console.log(mounted);
 });
 </script>
 
