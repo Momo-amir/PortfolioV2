@@ -7,12 +7,12 @@
         <img
           v-if="props.img"
           :src="props.img"
-          class="max-w-sm rounded-lg shadow-2xl" />
+          class="md:max-w-lg rounded-lg shadow-2xl contain" />
         <div>
-          <h1 v-if="props.title" class="text-8xl font-bold">
+          <h1 v-if="props.title" class="text-5xl sm:text-8xl font-bold">
             {{ props.title }}
           </h1>
-          <h2 v-if="props.manchet" class="py-6 text-5xl">
+          <h2 v-if="props.manchet" class="py-4 sm:py-6 text-3xl sm:text-5xl">
             {{ props.manchet }}
           </h2>
           <text-rte

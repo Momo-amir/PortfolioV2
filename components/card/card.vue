@@ -8,9 +8,9 @@
           :alt="imageAlt"
           class="w-full h-full object-cover rounded-xl" />
         <div
-          class="card absolute inset-0 bg-black bg-opacity-0 transition-opacity hover:bg-opacity-80 flex items-center justify-center">
+          class="card absolute inset-0 bg-opacity-60 bg-black md:bg-opacity-0 transition-opacity md:hover:bg-opacity-80 flex items-center justify-center">
           <div
-            class="card-text flex flex-col justify-center p-4 opacity-0 transition-opacity text-center">
+            class="card-text flex flex-col justify-center p-4 md:opacity-0 md:transition-opacity text-center">
             <h2 v-if="props.title" class="text-white text-lg">{{ title }}</h2>
             <p v-if="props.description" class="text-white">{{ description }}</p>
           </div>
