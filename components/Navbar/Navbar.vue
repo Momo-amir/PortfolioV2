@@ -1,17 +1,20 @@
 <template>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">MOMO</NuxtLink>
+      <NuxtLink
+        to="/"
+        class="btn btn-ghost normal-case text-xl font-bold md:ml-7"
+        >MOMO</NuxtLink
+      >
     </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1 mx-1">
+    <div class="navbar-center hidden lg:flex"></div>
+    <div class="navbar-end md:mr-10">
+      <ul class="menu menu-horizontal px-1 mx-1 hidden lg:flex font-semibold">
         <li><NuxtLink to="/portfolio">Portfolio</NuxtLink></li>
         <li><NuxtLink to="/about">Om mig</NuxtLink></li>
 
         <li><NuxtLink to="/contact">Kontakt</NuxtLink></li>
       </ul>
-    </div>
-    <div class="navbar-end">
       <LightDark class="mx-1" />
       <div class="dropdown" :class="{ open: isDropdownOpen }">
         <label
