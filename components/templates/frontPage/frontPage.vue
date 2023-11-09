@@ -12,5 +12,4 @@
 <script setup lang="ts">
 import { GqlHero } from "#gql";
 const heroData = await GqlHero({ id: "cloopxf9k04yd0bupi09h56k2" });
-console.log(heroData);
 </script>

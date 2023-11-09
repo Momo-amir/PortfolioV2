@@ -65,7 +65,6 @@ const ombudData = await GqlCard({ id: "clopgxmf3476o0buhr1w4so3f" });
 const portfolioHeaderData = await GqlPageHeader({
   id: "cloplmvnvk79u0bulc75ng0uo",
 });
-console.log(krusoData);
 </script>
 
 <style scoped lang="scss">

@@ -36,11 +36,8 @@ const props = defineProps<{
 }>();
 
 let mounted = ref(false);
-console.log(mounted);
-
 onMounted(() => {
   mounted.value = true;
-  console.log(mounted);
 });
 </script>
 

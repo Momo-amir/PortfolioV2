@@ -207,7 +207,6 @@ const filterBySchool = (
   selectedSchoolId: string | null
 ): IPartyVotingData[] => {
   let votesBySchoolAndParty: { [key: string]: IPartyVotingData } = {};
-  console.log(selectedSchoolId + "selectedSchoolId");
 
   data.forEach((item) => {
     if (item.schoolId === selectedSchoolId) {
@@ -219,7 +218,6 @@ const filterBySchool = (
           votes: 0,
         };
       }
-      console.log(selectedSchoolId + "selectedSchoolId");
 
       votesBySchoolAndParty[partyAndSchoolKey].votes += item.votes;
     }

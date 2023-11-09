@@ -42,12 +42,10 @@ const props = defineProps<{
 }>();
 
 let mounted = ref(false);
-console.log(mounted);
 
 onMounted(() => {
   setTimeout(() => {
     mounted.value = true;
-    console.log(mounted);
   }, 100);
 });
 </script>
