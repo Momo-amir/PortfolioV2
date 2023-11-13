@@ -1,6 +1,4 @@
 <template>
-  :
-
   <div class="hero min-h-screen bg-base" :key="id">
     <Transition name="fade">
       <div v-if="mounted" class="hero-content flex-col lg:flex-row-reverse">
